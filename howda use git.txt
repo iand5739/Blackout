@@ -1,0 +1,9 @@
+
+git pull
+
+cd ~
+cd .\Documents\
+cd .\platformer\
+git add *
+git commit -m save
+git push
