@@ -1,3 +1,7 @@
+
+
+
+
 counter++
 
 key_right = keyboard_check(ord("D"));

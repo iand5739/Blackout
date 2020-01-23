@@ -1,4 +1,4 @@
-draw_set_color(c_white)
+draw_set_color(c_black)
 draw_rectangle(0,0,room_width,hidePercent,false)
 draw_rectangle(0,room_height,room_width,room_height-hidePercent,false)
 
