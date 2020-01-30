@@ -1,7 +1,3 @@
-
-
-
-
 counter++
 
 key_right = keyboard_check(ord("D"));
@@ -30,6 +26,22 @@ y_scale = image_yscale*strech_scale;
 	
 }
 	
+	
+if (vsp > -3 and vsp < 3)
+{
+
+if (key_space and not(place_meeting(x,y+1,obj_wall)))
+{
+if (global.surf_exists == 1)
+	{
+		var count = random_range(30, 40);
+		global.blood_blend = make_colour_rgb(128+random(127), 128+random(127), 128+random(127))
+	    for (var i = 0; i < count; i++) {
+	        instance_create_depth(obj_player.x + random_range(-16, 16), obj_player.y + random_range(-16, 16),0, oBlood3);
+	    }
+	}
+}
+}
 	
 //horizontial collision
 if (place_meeting(x + hsp,y,obj_wall)) {
@@ -96,7 +108,7 @@ x_scale = lerp(x_scale, image_xscale, 0.1)
 y_scale = lerp(y_scale, image_yscale, 0.1)
 
 
-if (x != xprevious and counter > 10)
+if (x != xprevious and counter > 6)
 {
 	if (global.surf_exists == 1)
 	{
