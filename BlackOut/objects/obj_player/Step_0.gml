@@ -12,6 +12,24 @@ if (global.active == false)
 }
 
 
+
+if (vsp > 0)
+{
+if (place_meeting(x+hsp,y+vsp,obj_enemy1))
+{
+	vsp = ((vsp)*-1.2) - 1.5
+	instance_destroy(instance_nearest(x+hsp,y+vsp,obj_enemy1))
+}
+}
+
+if (place_meeting(x,y,obj_enemy1))
+{
+	if (global.active == 1)
+{
+		player_die()
+}
+}
+
 hsp = (key_right-key_left)*walksp
 
 //accelerating ground fall and jump
